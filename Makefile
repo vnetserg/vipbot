@@ -1,5 +1,5 @@
 
-# Be default, do nothing
+# By default, do nothing
 
 all:
 
