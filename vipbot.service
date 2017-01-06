@@ -1,0 +1,10 @@
+[Unit]
+Description=VIPBot Service
+After=multi-user.target
+
+[Service]
+Type=idle
+ExecStart=/usr/bin/vipbot
+
+[Install]
+WantedBy=multi-user.target
