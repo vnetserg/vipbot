@@ -29,9 +29,10 @@ clean-pyc:
 
 install:
 	bash ./setupvenv.sh
-	cp vipbot.yaml /etc/vipbot.yaml
+	if [[ ! -f /etc/vipbot.yaml ]]; then cp vipbot.yaml /etc/vipbot.yaml; fi
 	cp vipbot.sh /usr/bin/vipbot
 	cp vipbot.service /lib/systemd/system/vipbot.service
+	systemctl daemon-reload
 
 
 # Uninstallation target
@@ -39,3 +40,4 @@ install:
 uninstall:
 	rm -rf /opt/vipbot
 	rm -rf /usr/bin/vipbot
+	rm -rf /lib/systemd/system/vipbot.service
