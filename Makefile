@@ -38,6 +38,9 @@ install:
 # Uninstallation target
 
 uninstall:
-	rm -rf /opt/vipbot
-	rm -rf /usr/bin/vipbot
+	systemctl stop vipbot
+	systemctl disable vipbot
 	rm -rf /lib/systemd/system/vipbot.service
+	systemctl daemon-reload
+	rm -rf /usr/bin/vipbot
+	rm -rf /opt/vipbot

@@ -39,7 +39,6 @@ class VIPBot:
         if update.message.from_user.id not in self.user_ids:
             return update.message.reply_text(self.ACCESS_DENIED_MESSAGE)
         update.message.reply_text(self.HELLO_MESSAGE, reply_markup=self._keyboard)
-        #update.message.reply_text(self.UPDATE_MESSAGE, reply_markup=self._keyboard)
 
 
     def _onGetIp(self, bot, update):
