@@ -10,5 +10,5 @@ fi
 # Activate virtualenv
 source /opt/vipbot/bin/activate
 
-# Execute hcheck
-python -m vipbot ${@:1}
+# Execute vipbot
+exec python -m vipbot ${@:1}

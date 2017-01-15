@@ -30,7 +30,7 @@ fi
 # Install Python package
 python setup.py install
 if [[ $? -ne 0 ]]; then
-    echo "${0}: CRITICAL: could not install Health Check package under Python virtual environment"
+    echo "${0}: CRITICAL: could not install 'vipbot' package under Python virtual environment"
     exit 4
 fi
 
